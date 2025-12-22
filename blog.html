@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yuni的技术博客 - 分享关于AI工具开发、全栈开发和独立开发者经验的深度文章">
+  <meta name="keywords" content="技术博客, AI开发, 全栈开发, 独立开发者, 编程教程">
+
+  <title>博客 - Yuni</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">Yuni</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="navMenu">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="blog.html" class="active">博客</a></li>
+        <li><a href="newsletter.html">通讯</a></li>
+        <li><a href="resources.html">资源</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="contact.html">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero" style="min-height: 60vh;">
+    <div class="container">
+      <h1>技术博客</h1>
+      <p class="subtitle">深度文章 · 技术分享 · 实战经验</p>
+      <p>记录我在AI工具开发、全栈技术和独立开发旅程中的思考与实践</p>
+    </div>
+  </section>
+
+  <!-- Blog Posts -->
+  <section style="background: var(--white); min-height: auto; padding-top: 4rem; padding-bottom: 4rem;">
+    <div class="container">
+      <!-- Featured Post -->
+      <div class="card" style="margin-bottom: 3rem; background: linear-gradient(135deg, var(--light-beige) 0%, var(--warm-tan) 100%);">
+        <span class="tag">精选</span>
+        <span class="tag">AI</span>
+        <span class="tag">Deep Dive</span>
+        <h2 style="margin-top: 1rem;">构建AI工具的完整指南：从想法到上线</h2>
+        <p style="font-size: 1.1rem; margin-bottom: 1rem;">
+          这篇文章将带你了解如何从零开始构建一个AI工具产品。我会分享从市场调研、技术选型、产品开发到上线推广的完整流程，包括我在开发AI NanoBanana和AllAITools时踩过的坑和获得的经验。
+        </p>
+        <p style="color: var(--text-light); font-size: 0.9rem;">2025年1月15日 · 15分钟阅读</p>
+        <a href="#" class="btn btn-primary mt-2">阅读全文</a>
+      </div>
+
+      <!-- Blog Grid -->
+      <div class="grid grid-2">
+        <div class="card">
+          <span class="tag">AI</span>
+          <span class="tag">Tutorial</span>
+          <h3>如何用AI工具提升开发效率10倍</h3>
+          <p>
+            探索最新的AI编程助手工具，了解如何将Claude、GitHub Copilot等AI工具整合到你的开发流程中。分享实战经验和最佳实践。
+          </p>
+          <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">2025年1月10日 · 8分钟阅读</p>
+          <a href="#" class="mt-1" style="display: inline-block;">阅读更多 →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">Web Development</span>
+          <span class="tag">Guide</span>
+          <h3>独立开发者的技术栈选择策略</h3>
+          <p>
+            作为独立开发者，如何在众多技术中选择最适合自己的栈？分享我的技术选型方法论和实践经验。
+          </p>
+          <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">2025年1月5日 · 10分钟阅读</p>
+          <a href="#" class="mt-1" style="display: inline-block;">阅读更多 →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">Chrome Extension</span>
+          <span class="tag">Tutorial</span>
+          <h3>从零开发Chrome插件：Image Resize实战</h3>
+          <p>
+            详细讲解如何开发一个实用的Chrome浏览器插件，从项目搭建到发布上架的完整流程。包含完整代码示例。
+          </p>
+          <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">2024年12月28日 · 12分钟阅读</p>
+          <a href="#" class="mt-1" style="display: inline-block;">阅读更多 →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">SEO</span>
+          <span class="tag">Marketing</span>
+          <h3>独立开发者的SEO实战手册</h3>
+          <p>
+            SEO不仅仅是关键词优化。分享我如何通过内容策略、技术优化和外链建设为AI工具网站带来自然流量。
+          </p>
+          <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">2024年12月20日 · 15分钟阅读</p>
+          <a href="#" class="mt-1" style="display: inline-block;">阅读更多 →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">Full-Stack</span>
+          <span class="tag">Architecture</span>
+          <h3>现代Web应用架构设计最佳实践</h3>
+          <p>
+            探讨现代全栈应用的架构模式，包括前后端分离、微服务、Serverless等架构选择，以及如何做出权衡。
+          </p>
+          <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">2024年12月15日 · 20分钟阅读</p>
+          <a href="#" class="mt-1" style="display: inline-block;">阅读更多 →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">Productivity</span>
+          <span class="tag">Tools</span>
+          <h3>我的开发工具箱2025版</h3>
+          <p>
+            分享我每天使用的开发工具、效率插件和工作流程。从代码编辑器到部署平台，这些工具让我的开发效率翻倍。
+          </p>
+          <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">2024年12月10日 · 6分钟阅读</p>
+          <a href="#" class="mt-1" style="display: inline-block;">阅读更多 →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">Startup</span>
+          <span class="tag">Reflection</span>
+          <h3>独立开发一年：收入、教训与成长</h3>
+          <p>
+            回顾我作为独立开发者的第一年。分享真实的收入数据、遇到的挑战、犯过的错误，以及最重要的经验教训。
+          </p>
+          <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">2024年12月1日 · 18分钟阅读</p>
+          <a href="#" class="mt-1" style="display: inline-block;">阅读更多 →</a>
+        </div>
+
+        <div class="card">
+          <span class="tag">AI</span>
+          <span class="tag">Opinion</span>
+          <h3>AI不会取代开发者，但会重新定义开发</h3>
+          <p>
+            AI编程工具快速发展，开发者的角色正在改变。探讨AI时代开发者需要具备的新技能和思维方式。
+          </p>
+          <p style="color: var(--text-light); font-size: 0.85rem; margin-top: 1rem;">2024年11月25日 · 10分钟阅读</p>
+          <a href="#" class="mt-1" style="display: inline-block;">阅读更多 →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section style="background: linear-gradient(135deg, var(--primary-coral) 0%, var(--deep-red) 100%); color: var(--white); min-height: auto; text-align: center; padding: 4rem 5%;">
+    <div class="container">
+      <h2 style="color: var(--white);">不错过任何更新</h2>
+      <p style="color: var(--light-beige); max-width: 600px; margin: 0 auto 2rem;">
+        订阅我的通讯，每周获取最新文章和独家内容
+      </p>
+      <a href="newsletter.html" class="btn" style="background: var(--white); color: var(--deep-red);">立即订阅</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/linksee-dev" target="_blank" title="GitHub">GitHub</a>
+        <a href="https://bsky.app/profile/linksee-dev.bsky.social" target="_blank" title="Bluesky">Bluesky</a>
+        <a href="https://linkstack.lgbt/@yuni" target="_blank" title="LinkStack">LinkStack</a>
+      </div>
+      <p>&copy; 2025 Yuni. All rights reserved.</p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem;">Built with ❤️ by an indie developer</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function(event) {
+      const nav = document.querySelector('nav');
+      const menu = document.getElementById('navMenu');
+
+      if (!nav.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>

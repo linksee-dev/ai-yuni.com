@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Yuni的资源导航 - AI工具、浏览器插件、个人主页和所有项目链接">
+  <meta name="keywords" content="AI工具, Chrome插件, 开发者资源, 项目链接">
+
+  <title>资源 - Yuni</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">Yuni</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="navMenu">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="newsletter.html">通讯</a></li>
+        <li><a href="resources.html" class="active">资源</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="contact.html">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero" style="min-height: 60vh;">
+    <div class="container">
+      <h1>所有资源</h1>
+      <p class="subtitle">我的产品 · 工具 · 链接</p>
+      <p>这里汇集了我开发的所有产品、浏览器插件和个人主页链接</p>
+    </div>
+  </section>
+
+  <!-- Websites -->
+  <section style="background: var(--white); min-height: auto; padding: 4rem 5%;">
+    <div class="container">
+      <h2>🌐 网站项目</h2>
+      <p style="color: var(--text-light); margin-bottom: 2rem;">
+        我开发和运营的Web应用和网站
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="width: 100%; height: 150px; background: linear-gradient(135deg, var(--primary-coral) 0%, var(--deep-red) 100%); border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+            AI NB
+          </div>
+          <h3>AI NanoBanana</h3>
+          <span class="tag">AI Tools</span>
+          <span class="tag">SaaS</span>
+          <p>
+            智能AI工具平台，提供便捷的人工智能解决方案。集成多种AI模型和实用功能。
+          </p>
+          <a href="https://ai-nanobanana.com" target="_blank" class="btn btn-primary mt-2" style="width: 100%; text-align: center;">
+            访问网站 →
+          </a>
+        </div>
+
+        <div class="card">
+          <div style="width: 100%; height: 150px; background: linear-gradient(135deg, var(--warm-tan) 0%, var(--primary-coral) 100%); border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">
+            AllAI
+          </div>
+          <h3>AllAITools.ai</h3>
+          <span class="tag">AI Directory</span>
+          <span class="tag">Curation</span>
+          <p>
+            精心策划的AI工具导航站，发现最好的人工智能应用。每日更新，分类清晰。
+          </p>
+          <a href="https://allaitools.ai" target="_blank" class="btn btn-primary mt-2" style="width: 100%; text-align: center;">
+            访问网站 →
+          </a>
+        </div>
+
+        <div class="card">
+          <div style="width: 100%; height: 150px; background: linear-gradient(135deg, var(--deep-red) 0%, var(--primary-coral) 100%); border-radius: 10px; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; font-weight: bold;">
+            GPT 1:5
+          </div>
+          <h3>GPT Image 1:5</h3>
+          <span class="tag">AI Image</span>
+          <span class="tag">Tool</span>
+          <p>
+            专业的AI图像处理工具，轻松实现1:5比例调整。适合社交媒体和设计需求。
+          </p>
+          <a href="https://gpt-image-15.com" target="_blank" class="btn btn-primary mt-2" style="width: 100%; text-align: center;">
+            访问网站 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Browser Extensions -->
+  <section style="background: var(--light-beige); min-height: auto; padding: 4rem 5%;">
+    <div class="container">
+      <h2>🧩 浏览器插件</h2>
+      <p style="color: var(--text-light); margin-bottom: 2rem;">
+        提升效率的Chrome浏览器扩展
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <div style="width: 100%; height: 200px; background: linear-gradient(135deg, var(--light-beige) 0%, var(--warm-tan) 100%); border-radius: 10px; margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="font-size: 4rem; margin-bottom: 0.5rem;">🖼️</div>
+            <div style="font-weight: bold; color: var(--deep-red);">Image Resize</div>
+          </div>
+          <h3>Image Resize Extension</h3>
+          <span class="tag">Chrome Extension</span>
+          <span class="tag">Productivity</span>
+          <span class="tag">Image Tool</span>
+          <p>
+            一键调整图片尺寸的Chrome插件。支持批量处理、自定义尺寸、多种格式。简单高效，已获得 ⭐️⭐️⭐️⭐️⭐️ 好评。
+          </p>
+          <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <a href="https://chromewebstore.google.com/detail/image-resize/enflebcdbblipgkjdpllaibleddlpfae" target="_blank" class="btn btn-primary" style="flex: 1; text-align: center;">
+              安装插件 →
+            </a>
+          </div>
+        </div>
+
+        <div class="card" style="background: linear-gradient(135deg, var(--light-beige) 0%, rgba(235, 111, 70, 0.1) 100%); border: 2px dashed var(--primary-coral);">
+          <div style="width: 100%; height: 200px; border-radius: 10px; margin-bottom: 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <div style="font-size: 4rem; margin-bottom: 0.5rem;">🚀</div>
+            <div style="font-weight: bold; color: var(--primary-coral);">Coming Soon</div>
+          </div>
+          <h3>更多插件开发中...</h3>
+          <p style="color: var(--text-light);">
+            正在开发更多实用的浏览器插件。包括AI助手、开发者工具等。敬请期待！
+          </p>
+          <a href="newsletter.html" class="btn btn-outline mt-2" style="width: 100%; text-align: center;">
+            订阅获取更新
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social Links -->
+  <section style="background: var(--white); min-height: auto; padding: 4rem 5%;">
+    <div class="container">
+      <h2>🔗 个人主页</h2>
+      <p style="color: var(--text-light); margin-bottom: 2rem;">
+        在这些平台找到我
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🔗</div>
+          <h3>LinkStack</h3>
+          <p>我的个人链接聚合页面，一站式访问所有资源。</p>
+          <a href="https://linkstack.lgbt/@yuni" target="_blank" class="btn btn-outline mt-2" style="width: 100%; text-align: center;">
+            访问主页 →
+          </a>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🌐</div>
+          <h3>EgoLinks</h3>
+          <p>另一个个人主页，展示我的项目和社交媒体。</p>
+          <a href="https://egolinks.online/@yuniaigc" target="_blank" class="btn btn-outline mt-2" style="width: 100%; text-align: center;">
+            访问主页 →
+          </a>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💻</div>
+          <h3>GitHub</h3>
+          <p>开源项目和代码仓库，欢迎Star和Fork。</p>
+          <a href="https://github.com/linksee-dev" target="_blank" class="btn btn-outline mt-2" style="width: 100%; text-align: center;">
+            访问GitHub →
+          </a>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🦋</div>
+          <h3>Bluesky</h3>
+          <p>分享日常开发动态和技术见解。</p>
+          <a href="https://bsky.app/profile/linksee-dev.bsky.social" target="_blank" class="btn btn-outline mt-2" style="width: 100%; text-align: center;">
+            关注我 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section style="background: linear-gradient(135deg, var(--light-beige) 0%, var(--warm-tan) 100%); min-height: auto; padding: 4rem 5%;">
+    <div class="container">
+      <h2 class="text-center">🛠️ 技术栈</h2>
+      <p class="text-center" style="color: var(--text-light); max-width: 600px; margin: 0 auto 2rem;">
+        我使用的主要技术和工具
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>前端</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+            <span class="tag">React</span>
+            <span class="tag">Vue.js</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Next.js</span>
+            <span class="tag">Tailwind CSS</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>后端</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+            <span class="tag">Node.js</span>
+            <span class="tag">Python</span>
+            <span class="tag">FastAPI</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>AI & 工具</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+            <span class="tag">OpenAI API</span>
+            <span class="tag">Claude</span>
+            <span class="tag">Vercel</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: linear-gradient(135deg, var(--primary-coral) 0%, var(--deep-red) 100%); color: var(--white); min-height: auto; text-align: center; padding: 4rem 5%;">
+    <div class="container">
+      <h2 style="color: var(--white);">想要合作？</h2>
+      <p style="color: var(--light-beige); max-width: 600px; margin: 0 auto 2rem;">
+        如果你有有趣的项目想法，或者想要定制开发，欢迎联系我
+      </p>
+      <a href="contact.html" class="btn" style="background: var(--white); color: var(--deep-red);">联系我</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/linksee-dev" target="_blank" title="GitHub">GitHub</a>
+        <a href="https://bsky.app/profile/linksee-dev.bsky.social" target="_blank" title="Bluesky">Bluesky</a>
+        <a href="https://linkstack.lgbt/@yuni" target="_blank" title="LinkStack">LinkStack</a>
+      </div>
+      <p>&copy; 2025 Yuni. All rights reserved.</p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem;">Built with ❤️ by an indie developer</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function(event) {
+      const nav = document.querySelector('nav');
+      const menu = document.getElementById('navMenu');
+
+      if (!nav.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+
+    // Intersection Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>

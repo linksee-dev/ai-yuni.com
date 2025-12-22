@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="联系Yuni - 合作咨询、项目定制、技术交流">
+  <meta name="keywords" content="联系方式, 项目合作, 技术咨询, 独立开发者">
+
+  <title>联系 - Yuni</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="logo">Yuni</div>
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul id="navMenu">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="blog.html">博客</a></li>
+        <li><a href="newsletter.html">通讯</a></li>
+        <li><a href="resources.html">资源</a></li>
+        <li><a href="about.html">关于</a></li>
+        <li><a href="contact.html" class="active">联系</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <section class="hero" style="min-height: 60vh;">
+    <div class="container">
+      <h1>联系我</h1>
+      <p class="subtitle">合作咨询 · 项目定制 · 技术交流</p>
+      <p>
+        有项目想法？想要合作？或者只是想聊聊技术？<br>
+        我很乐意听到你的声音！
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Methods -->
+  <section style="background: var(--white); min-height: auto; padding: 4rem 5%;">
+    <div class="container">
+      <h2 class="text-center">联系方式</h2>
+      <p class="text-center" style="color: var(--text-light); max-width: 600px; margin: 0 auto 2rem;">
+        选择最适合你的方式与我联系
+      </p>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">💻</div>
+          <h3>GitHub</h3>
+          <p>查看我的开源项目，提交Issue或Pull Request。</p>
+          <a href="https://github.com/linksee-dev" target="_blank" class="btn btn-outline mt-2" style="width: 100%; text-align: center;">
+            访问GitHub →
+          </a>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">🦋</div>
+          <h3>Bluesky</h3>
+          <p>关注我的日常开发动态，或者发私信给我。</p>
+          <a href="https://bsky.app/profile/linksee-dev.bsky.social" target="_blank" class="btn btn-outline mt-2" style="width: 100%; text-align: center;">
+            关注我 →
+          </a>
+        </div>
+
+        <div class="card">
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📧</div>
+          <h3>Email</h3>
+          <p>发送邮件给我，通常24小时内回复。</p>
+          <a href="mailto:hello@ai-yuni.com" class="btn btn-outline mt-2" style="width: 100%; text-align: center;">
+            发送邮件 →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section style="background: var(--light-beige); min-height: auto; padding: 4rem 5%;">
+    <div class="container" style="max-width: 700px;">
+      <h2 class="text-center">快速联系表单</h2>
+      <p class="text-center" style="color: var(--text-light); margin-bottom: 2rem;">
+        填写下面的表单，我会尽快回复你
+      </p>
+
+      <div class="card">
+        <form id="contactForm" style="display: flex; flex-direction: column; gap: 1.5rem;">
+          <div>
+            <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark);">
+              姓名 *
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              required
+              placeholder="你的姓名"
+              style="width: 100%; padding: 1rem; border: 2px solid var(--warm-tan); border-radius: 10px; font-size: 1rem; font-family: inherit;"
+            >
+          </div>
+
+          <div>
+            <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark);">
+              邮箱 *
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              placeholder="your@email.com"
+              style="width: 100%; padding: 1rem; border: 2px solid var(--warm-tan); border-radius: 10px; font-size: 1rem; font-family: inherit;"
+            >
+          </div>
+
+          <div>
+            <label for="subject" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark);">
+              主题 *
+            </label>
+            <select
+              id="subject"
+              name="subject"
+              required
+              style="width: 100%; padding: 1rem; border: 2px solid var(--warm-tan); border-radius: 10px; font-size: 1rem; font-family: inherit; background: white;"
+            >
+              <option value="">请选择...</option>
+              <option value="collaboration">项目合作</option>
+              <option value="custom">定制开发</option>
+              <option value="consulting">技术咨询</option>
+              <option value="speaking">演讲邀请</option>
+              <option value="other">其他</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="message" style="display: block; margin-bottom: 0.5rem; font-weight: 600; color: var(--text-dark);">
+              留言 *
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows="6"
+              placeholder="告诉我你的想法..."
+              style="width: 100%; padding: 1rem; border: 2px solid var(--warm-tan); border-radius: 10px; font-size: 1rem; font-family: inherit; resize: vertical;"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            发送消息
+          </button>
+
+          <p style="font-size: 0.85rem; color: var(--text-light); text-align: center; margin: 0;">
+            提交表单即表示你同意我联系你并回复你的消息
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I Can Help With -->
+  <section style="background: var(--white); min-height: auto; padding: 4rem 5%;">
+    <div class="container">
+      <h2 class="text-center">我能帮助你什么？</h2>
+      <p class="text-center" style="color: var(--text-light); max-width: 600px; margin: 0 auto 2rem;">
+        这些是我可以提供的服务和帮助
+      </p>
+
+      <div class="grid grid-2">
+        <div class="card">
+          <h3 style="color: var(--primary-coral);">🚀 产品开发</h3>
+          <p>
+            从想法到上线的全栈开发服务。包括需求分析、技术选型、开发实现和部署运维。
+          </p>
+          <ul style="color: var(--text-light); margin-top: 1rem; padding-left: 1.5rem;">
+            <li>Web应用开发</li>
+            <li>AI工具集成</li>
+            <li>Chrome浏览器插件</li>
+            <li>API开发</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="color: var(--primary-coral);">💡 技术咨询</h3>
+          <p>
+            为你的项目提供技术建议和架构设计。帮助你做出正确的技术决策。
+          </p>
+          <ul style="color: var(--text-light); margin-top: 1rem; padding-left: 1.5rem;">
+            <li>技术栈选择</li>
+            <li>架构设计评审</li>
+            <li>性能优化建议</li>
+            <li>代码审查</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="color: var(--primary-coral);">📈 增长策略</h3>
+          <p>
+            分享我在产品增长、SEO优化和用户获取方面的实战经验。
+          </p>
+          <ul style="color: var(--text-light); margin-top: 1rem; padding-left: 1.5rem;">
+            <li>SEO优化</li>
+            <li>内容营销</li>
+            <li>用户增长策略</li>
+            <li>数据分析</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3 style="color: var(--primary-coral);">🎤 演讲/写作</h3>
+          <p>
+            接受演讲邀请和技术文章约稿。乐于分享独立开发和AI工具开发的经验。
+          </p>
+          <ul style="color: var(--text-light); margin-top: 1rem; padding-left: 1.5rem;">
+            <li>技术分享/演讲</li>
+            <li>博客文章约稿</li>
+            <li>播客访谈</li>
+            <li>技术培训</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Response Time -->
+  <section style="background: linear-gradient(135deg, var(--primary-coral) 0%, var(--deep-red) 100%); color: var(--white); min-height: auto; padding: 4rem 5%;">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">⚡</div>
+          <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 0.5rem;">24h</h3>
+          <p style="color: var(--light-beige);">平均回复时间</p>
+        </div>
+
+        <div class="card" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">🌏</div>
+          <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 0.5rem;">UTC+8</h3>
+          <p style="color: var(--light-beige);">工作时区</p>
+        </div>
+
+        <div class="card" style="background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); text-align: center;">
+          <div style="font-size: 3rem; margin-bottom: 0.5rem;">💬</div>
+          <h3 style="color: var(--white); font-size: 2rem; margin-bottom: 0.5rem;">中/En</h3>
+          <p style="color: var(--light-beige);">支持语言</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section style="background: var(--light-beige); min-height: auto; padding: 4rem 5%;">
+    <div class="container" style="max-width: 800px;">
+      <h2 class="text-center">常见问题</h2>
+      <p class="text-center" style="color: var(--text-light); margin-bottom: 2rem;">
+        在联系我之前，这些可能对你有帮助
+      </p>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>💰 你的服务如何收费？</h3>
+        <p>
+          收费根据项目复杂度和时间投入而定。小型项目通常按项目收费，大型项目可以按时薪或月度合作。具体报价请通过邮件咨询。
+        </p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>⏰ 你的工作时间是？</h3>
+        <p>
+          我通常在UTC+8时区的周一到周五工作，但由于是独立开发者，时间安排相对灵活。紧急项目可以协商周末工作。
+        </p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>🤝 可以远程合作吗？</h3>
+        <p>
+          当然！我的所有合作都是远程进行的。我有丰富的远程协作经验，使用Slack、Discord、腾讯会议等工具保持沟通。
+        </p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <h3>📝 可以签订正式合同吗？</h3>
+        <p>
+          可以的。对于正式的商业项目，我会提供合同和发票。保护双方的权益是合作的基础。
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🎓 接受学生/个人的小项目吗？</h3>
+        <p>
+          视情况而定。如果项目有趣且时间允许，我很乐意帮助。但由于时间有限，可能无法接受所有请求。欢迎先发邮件沟通。
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section style="background: var(--white); min-height: auto; text-align: center; padding: 4rem 5%;">
+    <div class="container">
+      <h2>准备好开始了吗？</h2>
+      <p style="color: var(--text-light); max-width: 600px; margin: 0 auto 2rem;">
+        无论你有什么想法，都欢迎与我分享。<br>
+        让我们一起把想法变成现实！
+      </p>
+      <a href="mailto:hello@ai-yuni.com" class="btn btn-primary">立即联系</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="social-links">
+        <a href="https://github.com/linksee-dev" target="_blank" title="GitHub">GitHub</a>
+        <a href="https://bsky.app/profile/linksee-dev.bsky.social" target="_blank" title="Bluesky">Bluesky</a>
+        <a href="https://linkstack.lgbt/@yuni" target="_blank" title="LinkStack">LinkStack</a>
+      </div>
+      <p>&copy; 2025 Yuni. All rights reserved.</p>
+      <p style="font-size: 0.9rem; margin-top: 0.5rem;">Built with ❤️ by an indie developer</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('navMenu');
+      menu.classList.toggle('active');
+    }
+
+    document.addEventListener('click', function(event) {
+      const nav = document.querySelector('nav');
+      const menu = document.getElementById('navMenu');
+
+      if (!nav.contains(event.target)) {
+        menu.classList.remove('active');
+      }
+    });
+
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Get form data
+      const formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value
+      };
+
+      // In a real implementation, you would send this to a backend
+      console.log('Form submitted:', formData);
+
+      // Show success message
+      alert('感谢你的留言！我会尽快回复你。');
+
+      // Reset form
+      this.reset();
+    });
+
+    // Intersection Observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.card').forEach(card => {
+      observer.observe(card);
+    });
+  </script>
+</body>
+</html>
