@@ -31,13 +31,40 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
-          bundler-cache: true
 
-      - name: Build site with Jekyll
-        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+      - name: Install gems
+        working-directory: blog-site
+        run: |
+          bundle config set path vendor/bundle
+          bundle install --jobs 4 --retry 3
+
+      - name: Build blog site for GitHub Pages
+        working-directory: blog-site
+        run: |
+          bundle exec jekyll build \
+            --destination "../_site${{ steps.pages.outputs.base_path }}/blog" \
+            --baseurl "${{ steps.pages.outputs.base_path }}/blog" \
+            --url "https://linksee-dev.github.io"
         env:
           JEKYLL_ENV: production
 
+      - name: Create root redirect
+        run: |
+          mkdir -p "_site${{ steps.pages.outputs.base_path }}"
+          cat > "_site${{ steps.pages.outputs.base_path }}/index.html" <<'EOF'
+          <!DOCTYPE html>
+          <html lang="zh-CN">
+          <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="refresh" content="0; url=./blog/">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Redirecting...</title>
+          </head>
+          <body>
+            <p>Redirecting to <a href="./blog/">blog</a> ...</p>
+          </body>
+          </html>
+          EOF
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

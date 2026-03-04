@@ -1,28 +1,25 @@
-# Yuni Notes (Jekyll + Chirpy)
+# ai-yuni.com
 
-这是一个基于 **Jekyll + Chirpy** 的 `newsletter + blog` 聚合站。
+当前结构是“双层站点”：
 
-核心目标：
-
-- 所有内容只维护一份：`_posts/*.md`
-- Blog 与 Newsletter 只是同一内容源的两种分类视图
-- GitHub Pages 自动构建部署，GitHub 上写文章后站点自动同步
+- 根目录 `/`：保留原来的视觉首页（Cloudflare 上的主站）
+- 子目录 `/blog/`：Jekyll + Chirpy 的 Blog/Newsletter 内容系统
 
 ## 目录结构
 
-- `_posts/`：唯一内容源（文章与 newsletter 都在这里）
-- `_tabs/blog.md`：Blog 聚合页（筛选 `categories: [blog]`）
-- `_tabs/newsletter.md`：Newsletter 聚合页（筛选 `categories: [newsletter]`）
-- `_tabs/resources.md`：资源页
-- `_tabs/about.md`：关于页
-- `.github/workflows/pages.yml`：GitHub Pages 自动部署
+- `index.html` / `style.css` / `app.js`：主站首页（保留旧版设计）
+- `blog.html`：跳转到 `/blog/`
+- `newsletter.html`：跳转到 `/blog/newsletter/`
+- `blog-site/`：Jekyll 博客源代码
+  - `blog-site/_posts/`：唯一内容源
+  - `blog-site/_tabs/`：Blog / Newsletter / Resources / About
 
-## 写作规范
+## 写作方式
 
-新建文章文件：
+在 GitHub 直接新增文章到：
 
 ```text
-_posts/YYYY-MM-DD-your-slug.md
+blog-site/_posts/YYYY-MM-DD-your-slug.md
 ```
 
 Front Matter 示例：
@@ -37,40 +34,27 @@ excerpt: 一句话摘要
 ---
 ```
 
-## 本地预览
+## 部署
+
+### Cloudflare Pages（生产）
+
+- 工作流：`.github/workflows/cloudflare-pages.yml`
+- 行为：
+  1. 构建 `blog-site` 到临时目录
+  2. 组装发布目录：根目录保留主站，博客输出放在 `/blog/`
+  3. 发布到 Cloudflare Pages 项目 `ai-yuni`
+
+### GitHub Pages（镜像）
+
+- 工作流：`.github/workflows/pages.yml`
+- 行为：把博客镜像发布到 `https://linksee-dev.github.io/ai-yuni.com/blog/`
+
+## 本地预览（仅博客）
 
 ```bash
+cd blog-site
 bundle install
-bundle exec jekyll serve
+bundle exec jekyll serve --baseurl /blog
 ```
 
-访问：`http://127.0.0.1:4000`
-
-## GitHub Pages 发布
-
-1. 推送到 `main`（或 `master`）分支。
-2. GitHub Actions 自动执行 `.github/workflows/pages.yml`。
-3. 在仓库 `Settings -> Pages` 中选择 `GitHub Actions` 作为部署方式。
-4. 若使用自定义域名，仓库根目录保留 `CNAME` 文件（当前为 `ai-yuni.com`）。
-
-## Cloudflare Pages 发布（当前生产）
-
-生产域名 `ai-yuni.com` 当前由 Cloudflare Pages 托管。
-
-1. 推送到 `main`（或 `master`）分支。
-2. GitHub Actions 自动执行 `.github/workflows/cloudflare-pages.yml`。
-3. 工作流会构建 Jekyll 后发布到 Cloudflare Pages 项目 `ai-yuni`。
-
-## 重要配置
-
-当前已按自定义域名配置：
-
-- `url: https://ai-yuni.com`
-- `baseurl: ""`
-
-## Cloudflare DNS（必须）
-
-若你用 Cloudflare 托管域名，请确保：
-
-1. `ai-yuni.com` / `www.ai-yuni.com` 已绑定到 Cloudflare Pages 项目 `ai-yuni`。
-2. 若改为 GitHub Pages 直出，再把 `@` 与 `www` 指到 `linksee-dev.github.io`。
+访问：`http://127.0.0.1:4000/blog/`

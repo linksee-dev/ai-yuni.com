@@ -22,16 +22,30 @@ jobs:
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: "3.3"
-          bundler-cache: true
+
+      - name: Install gems
+        working-directory: blog-site
+        run: |
+          bundle config set path vendor/bundle
+          bundle install --jobs 4 --retry 3
 
       - name: Build site with Jekyll
-        run: bundle exec jekyll build -d _site
+        working-directory: blog-site
+        run: bundle exec jekyll build -d ../_blog_site
         env:
           JEKYLL_ENV: production
+
+      - name: Assemble deploy directory
+        run: |
+          rm -rf _deploy
+          mkdir -p _deploy/blog
+
+          cp index.html style.css app.js about.html contact.html resources.html reference.png blog.html newsletter.html _deploy/
+          cp -R _blog_site/. _deploy/blog/
 
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy _site --project-name=ai-yuni --branch=main
+          command: pages deploy _deploy --project-name=ai-yuni --branch=main

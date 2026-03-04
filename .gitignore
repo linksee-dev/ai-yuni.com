@@ -6,3 +6,9 @@ _site/
 vendor/
 .DS_Store
 .wrangler/
+_blog_site/
+_deploy/
+blog-site/vendor/
+blog-site/.bundle/
+blog-site/.jekyll-cache/
+blog-site/.jekyll-metadata

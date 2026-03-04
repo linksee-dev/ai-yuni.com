@@ -3,7 +3,7 @@ layout: page
 title: Blog
 icon: fas fa-pen-nib
 order: 1
-permalink: /blog/
+permalink: /all/
 ---
 
 这里是偏长期沉淀的文章：方法论、案例复盘、技术深潜。
