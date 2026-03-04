@@ -41,6 +41,7 @@ jobs:
           mkdir -p _deploy/blog
 
           cp index.html style.css app.js about.html contact.html resources.html reference.png blog.html newsletter.html _deploy/
+          cp -R make-a-frend _deploy/
           cp -R _blog_site/. _deploy/blog/
 
       - name: Deploy to Cloudflare Pages
