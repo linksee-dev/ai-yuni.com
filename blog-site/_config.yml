@@ -35,6 +35,7 @@ comments:
 
 # 让首页成为聚合页，按时间显示所有内容
 paginate: 10
+permalink: /:year/:month/:day/:title/
 
 collections:
   tabs:

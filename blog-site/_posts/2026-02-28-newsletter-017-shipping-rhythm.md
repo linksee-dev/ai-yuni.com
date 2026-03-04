@@ -4,7 +4,6 @@ date: 2026-02-28 08:00:00 +0800
 categories: [newsletter]
 tags: [newsletter, shipping, productivity]
 excerpt: 本期聊发布节奏、一个可直接复用的周计划模板，以及 3 个值得试的工具。
-pin: true
 ---
 
 欢迎来到第 17 期。

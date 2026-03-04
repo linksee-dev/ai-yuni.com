@@ -4,7 +4,6 @@ date: 2026-03-01 09:00:00 +0800
 categories: [blog]
 tags: [ai, product, indie-hacking]
 excerpt: 从想法到留存，拆解一个 AI 工具从 0 到 1 的完整交付路径。
-pin: true
 ---
 
 大多数 AI 工具失败，不是因为模型不够强，而是因为用户在第三天就失去使用理由。
