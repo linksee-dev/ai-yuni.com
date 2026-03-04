@@ -1,0 +1,61 @@
+lang: zh-CN
+timezone: Asia/Shanghai
+
+title: Yuni Notes
+tagline: Newsletter + Blog Hub for Indie Builder Notes
+description: >-
+  一个聚合 blog 与 newsletter 的内容中心。所有内容统一写在 _posts，
+  GitHub Pages 与本地站点保持同源同步。
+
+# 修改为你的实际域名/仓库地址
+url: "https://linksee-dev.github.io"
+baseurl: "/ai-yuni.com"
+
+github:
+  username: linksee-dev
+
+social:
+  name: Yuni
+  email: hi@yuni.dev
+  links:
+    - https://github.com/linksee-dev
+    - https://bsky.app/profile/linksee-dev.bsky.social
+    - https://linkstack.lgbt/@yuni
+    - https://egolinks.online/@yuniaigc
+
+theme: jekyll-theme-chirpy
+
+plugins:
+  - jekyll-include-cache
+
+# Chirpy / SEO
+toc: true
+comments:
+  active: false
+
+# 让首页成为聚合页，按时间显示所有内容
+paginate: 10
+
+collections:
+  tabs:
+    output: true
+    sort_by: order
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Yuni
+      toc: true
+      comments: false
+
+exclude:
+  - README.md
+  - IMPLEMENTATION.md
+  - reference.png
+  - vendor
+  - node_modules
+  - scripts
