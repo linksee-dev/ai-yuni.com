@@ -42,15 +42,15 @@ jobs:
         working-directory: blog-site
         run: |
           bundle exec jekyll build \
-            --destination "../_site${{ steps.pages.outputs.base_path }}/blog" \
+            --destination "../_site/blog" \
             --baseurl "${{ steps.pages.outputs.base_path }}/blog"
         env:
           JEKYLL_ENV: production
 
       - name: Create root redirect
         run: |
-          mkdir -p "_site${{ steps.pages.outputs.base_path }}"
-          cat > "_site${{ steps.pages.outputs.base_path }}/index.html" <<'EOF'
+          mkdir -p "_site"
+          cat > "_site/index.html" <<'EOF'
           <!DOCTYPE html>
           <html lang="zh-CN">
           <head>
