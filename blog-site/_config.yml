@@ -33,8 +33,7 @@ toc: true
 comments:
   active: false
 
-# 让首页成为聚合页，按时间显示所有内容
-paginate: 10
+# 让首页展示全部文章（不启用分页）
 permalink: /:year/:month/:day/:title/
 
 collections:
