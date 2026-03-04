@@ -4,22 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Make a Friend | Yuni</title>
-  <meta name="description" content="Hi, there! 这里是 Yuni 的交流入口，欢迎一起做产品、聊增长、聊 AI。">
+  <meta name="description" content="Hi, I'm Yuni. Solo Developer | Full-Stack Engineer | AI Product Builder.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-coral: #eb6f46;
-      --light-beige: #e9e7e0;
-      --warm-tan: #e3c5b2;
-      --deep-red: #a72218;
-      --text-dark: #121212;
-      --text-light: #616161;
-      --white: #ffffff;
-      --black: #080808;
+      --primary: #38bdf8;
+      --accent: #eb6f46;
+      --bg: #070707;
       --panel: rgba(255, 255, 255, 0.04);
-      --panel-border: rgba(255, 255, 255, 0.12);
+      --border: rgba(255, 255, 255, 0.14);
+      --text: #f5f5f5;
+      --muted: rgba(255, 255, 255, 0.72);
     }
 
     * {
@@ -30,31 +27,31 @@
 
     body {
       font-family: "Inter", "Segoe UI", sans-serif;
-      color: var(--white);
+      color: var(--text);
       background:
-        radial-gradient(circle at 10% 10%, rgba(235, 111, 70, 0.2), transparent 30%),
-        radial-gradient(circle at 80% 0%, rgba(167, 34, 24, 0.22), transparent 28%),
-        radial-gradient(circle at 50% 100%, rgba(227, 197, 178, 0.16), transparent 35%),
-        var(--black);
+        radial-gradient(circle at 8% 10%, rgba(56, 189, 248, 0.2), transparent 28%),
+        radial-gradient(circle at 85% 0%, rgba(235, 111, 70, 0.18), transparent 28%),
+        radial-gradient(circle at 55% 100%, rgba(167, 34, 24, 0.22), transparent 36%),
+        var(--bg);
       line-height: 1.75;
       min-height: 100vh;
     }
 
     a {
-      color: var(--light-beige);
+      color: #c8ecff;
       text-decoration: none;
     }
 
     a:hover {
-      color: var(--primary-coral);
+      color: var(--primary);
     }
 
     .topbar {
       position: sticky;
       top: 0;
       z-index: 100;
-      backdrop-filter: blur(16px);
-      background: rgba(8, 8, 8, 0.72);
+      backdrop-filter: blur(14px);
+      background: rgba(7, 7, 7, 0.72);
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
 
@@ -65,161 +62,79 @@
       justify-content: space-between;
       align-items: center;
       padding: 14px 0;
-      gap: 18px;
+      gap: 14px;
     }
 
     .brand {
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-weight: 700;
       letter-spacing: 0.08em;
-      color: var(--white);
-      font-size: 1.05rem;
+      color: var(--text);
     }
 
-    .top-links {
+    .links {
       display: flex;
-      gap: 14px;
+      gap: 10px;
       flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
-    .top-link {
+    .link-btn {
       border: 1px solid rgba(255, 255, 255, 0.16);
-      color: var(--white);
-      padding: 8px 12px;
       border-radius: 999px;
-      font-size: 0.85rem;
-      letter-spacing: 0.04em;
+      padding: 8px 12px;
+      font-size: 0.84rem;
+      color: var(--text);
       text-transform: uppercase;
-      transition: all 0.24s ease;
+      letter-spacing: 0.04em;
+      transition: all 0.2s ease;
     }
 
-    .top-link:hover {
-      border-color: var(--primary-coral);
-      background: rgba(235, 111, 70, 0.14);
-      color: var(--white);
+    .link-btn:hover {
+      border-color: var(--primary);
+      background: rgba(56, 189, 248, 0.12);
+      color: var(--text);
     }
 
     main {
       width: min(1120px, 92vw);
       margin: 0 auto;
-      padding: 56px 0 88px;
+      padding: 38px 0 88px;
     }
 
     .hero {
-      padding: 34px 0 40px;
+      text-align: center;
+      padding: 16px 0 20px;
     }
 
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border-radius: 999px;
-      border: 1px solid rgba(227, 197, 178, 0.34);
-      color: var(--warm-tan);
-      background: rgba(227, 197, 178, 0.09);
-      font-size: 0.82rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      padding: 8px 14px;
-      margin-bottom: 18px;
-    }
-
-    h1 {
+    .hero h1 {
       font-family: "Space Grotesk", "Inter", sans-serif;
       font-size: clamp(2rem, 5vw, 4rem);
       line-height: 1.06;
-      letter-spacing: 0.01em;
+      margin-bottom: 10px;
+    }
+
+    .hero h3 {
+      font-size: clamp(1rem, 2.2vw, 1.32rem);
+      color: var(--muted);
+      font-weight: 600;
       margin-bottom: 16px;
     }
 
-    .hero p {
-      color: rgba(255, 255, 255, 0.82);
-      max-width: 780px;
-      font-size: clamp(1rem, 2.2vw, 1.2rem);
+    .typing {
+      max-width: 100%;
+      margin: 0 auto;
     }
 
-    .join-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 30px;
-    }
-
-    .join-card {
+    .panel {
+      margin-top: 26px;
       background: var(--panel);
-      border: 1px solid var(--panel-border);
-      border-radius: 18px;
-      padding: 22px;
-      position: relative;
-      overflow: hidden;
-      transition: transform 0.25s ease, border-color 0.25s ease;
-    }
-
-    .join-card::before {
-      content: "";
-      position: absolute;
-      inset: -30% auto auto -20%;
-      width: 180px;
-      height: 180px;
-      border-radius: 50%;
-      background: radial-gradient(circle, rgba(235, 111, 70, 0.24), transparent 65%);
-      pointer-events: none;
-    }
-
-    .join-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(235, 111, 70, 0.66);
-    }
-
-    .join-title {
-      font-size: 1.08rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .join-desc {
-      color: rgba(255, 255, 255, 0.74);
-      font-size: 0.96rem;
-      margin-bottom: 14px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .join-action {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 999px;
-      color: var(--white);
-      padding: 8px 13px;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      position: relative;
-      z-index: 1;
-      transition: all 0.2s ease;
-    }
-
-    .join-action:hover {
-      border-color: var(--primary-coral);
-      background: rgba(235, 111, 70, 0.14);
-      color: var(--white);
-    }
-
-    .article {
-      margin-top: 24px;
-      background: rgba(0, 0, 0, 0.32);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid var(--border);
       border-radius: 22px;
-      padding: 26px 24px 30px;
+      padding: 26px 22px 30px;
     }
 
     .section {
-      margin-top: 26px;
+      margin-top: 28px;
     }
 
     .section:first-child {
@@ -228,99 +143,82 @@
 
     .section h2 {
       font-family: "Space Grotesk", "Inter", sans-serif;
-      font-size: clamp(1.2rem, 2.3vw, 1.65rem);
+      font-size: clamp(1.2rem, 2.3vw, 1.62rem);
       margin-bottom: 12px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
       padding-bottom: 10px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.14);
     }
 
-    .section p {
-      color: rgba(255, 255, 255, 0.84);
-      margin-bottom: 10px;
+    .section p,
+    .section li {
+      color: rgba(255, 255, 255, 0.88);
     }
 
     .section ul {
       padding-left: 20px;
-      color: rgba(255, 255, 255, 0.86);
     }
 
-    .section li {
-      margin-bottom: 8px;
-    }
-
-    .section li:last-child {
-      margin-bottom: 0;
-    }
-
-    .chips {
+    .badge-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .badge-grid img {
+      height: 24px;
+      border-radius: 5px;
+    }
+
+    .subhead {
+      font-weight: 700;
+      margin-top: 14px;
+      margin-bottom: 8px;
+      color: #dff4ff;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+      align-items: start;
+    }
+
+    .stats img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    .wide {
       margin-top: 14px;
     }
 
-    .chip {
-      font-size: 0.82rem;
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 999px;
-      padding: 7px 12px;
-      color: rgba(255, 255, 255, 0.86);
-      background: rgba(255, 255, 255, 0.03);
+    .wide img {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(0, 0, 0, 0.2);
     }
 
-    .cta {
-      margin-top: 26px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .closing {
+      margin-top: 18px;
+      text-align: center;
+      color: rgba(255, 255, 255, 0.75);
     }
 
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      padding: 10px 16px;
-      font-size: 0.86rem;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    .divider {
+      margin: 24px 0;
+      height: 1px;
+      border: 0;
+      background: rgba(255, 255, 255, 0.13);
     }
 
-    .btn-primary {
-      border: 1px solid rgba(235, 111, 70, 0.8);
-      color: var(--white);
-      background: linear-gradient(135deg, rgba(235, 111, 70, 0.7), rgba(167, 34, 24, 0.7));
-    }
-
-    .btn-secondary {
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: var(--white);
-      background: rgba(255, 255, 255, 0.04);
-    }
-
-    .btn:hover {
-      transform: translateY(-2px);
-      color: var(--white);
-    }
-
-    .footer-note {
-      margin-top: 34px;
-      color: rgba(255, 255, 255, 0.5);
-      font-size: 0.86rem;
-    }
-
-    @media (max-width: 860px) {
-      .join-grid {
+    @media (max-width: 840px) {
+      .stats {
         grid-template-columns: 1fr;
-      }
-
-      main {
-        padding-top: 30px;
-      }
-
-      .article {
-        padding: 22px 18px 24px;
       }
     }
   </style>
@@ -329,96 +227,140 @@
   <header class="topbar">
     <div class="topbar-inner">
       <a href="/" class="brand">YUNI</a>
-      <nav class="top-links" aria-label="Page Navigation">
-        <a class="top-link" href="/">Home</a>
-        <a class="top-link" href="/blog/">Blog</a>
-        <a class="top-link" href="/blog/newsletter/">Newsletter</a>
+      <nav class="links" aria-label="Main Links">
+        <a class="link-btn" href="/">Home</a>
+        <a class="link-btn" href="/blog/">Blog</a>
+        <a class="link-btn" href="/blog/newsletter/">Newsletter</a>
       </nav>
     </div>
   </header>
 
   <main>
     <section class="hero">
-      <div class="eyebrow">Make a Frend</div>
-      <h1>Hi, there!<br>欢迎来认识我。</h1>
-      <p>
-        这个页面是我的公开交流入口。你可以通过 newsletter、blog 或直接私信找到我。
-        如果你在做 AI 产品、Chrome 插件、SaaS，或者想把内容做成可持续增长系统，欢迎来聊。
-      </p>
-
-      <div class="join-grid">
-        <article class="join-card">
-          <h3 class="join-title">加入 Newsletter</h3>
-          <p class="join-desc">每周发布独立开发与增长复盘，内容和我的 blog 同源。</p>
-          <a class="join-action" href="/blog/newsletter/">去订阅 →</a>
-        </article>
-
-        <article class="join-card">
-          <h3 class="join-title">直接联系我</h3>
-          <p class="join-desc">想进交流群或合作，直接发邮件或在 Bluesky 给我留言就行。</p>
-          <a class="join-action" href="mailto:hi@yuni.dev">发邮件 →</a>
-        </article>
-      </div>
+      <h1>Hi, I'm Yuni 👋</h1>
+      <h3>Solo Developer | Full-Stack Engineer | AI Product Builder</h3>
+      <a href="https://git.io/typing-svg" target="_blank" rel="noopener">
+        <img
+          class="typing"
+          src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1200&color=38BDF8&center=true&vCenter=true&width=720&lines=I+build+useful+tools+for+real+users;Shipping+products+fast%2C+from+idea+to+launch;Open+source%2C+AI+automation%2C+SaaS+engineering"
+          alt="Typing SVG"
+        >
+      </a>
     </section>
 
-    <article class="article">
-      <section class="section">
-        <h2>🚀 关于我</h2>
-        <p>独立开发者，专注 AI 工具、Web 应用与内容增长。</p>
-        <p>目前重点在做可持续发布系统：产品开发 + 内容分发 + 搜索流量闭环。</p>
-      </section>
-
-      <section class="section">
-        <h2>🛠 技能</h2>
+    <section class="panel">
+      <div class="section">
+        <h2>🚀 About Me</h2>
         <ul>
-          <li>前端：Next.js、React、Tailwind、Chrome Extension（Plasmo）</li>
-          <li>后端：Node.js、Serverless Functions</li>
-          <li>数据：Postgres、Prisma、基础分析埋点</li>
-          <li>增长：SEO 内容系统、Newsletter 节奏、分发复用</li>
+          <li>🧑‍💻 Independent developer focused on practical AI + SaaS products</li>
+          <li>⚙️ I build full-stack apps with fast iteration and clean execution</li>
+          <li>🌱 Currently exploring growth systems, payments, and productized services</li>
+          <li>🤝 Open to collaboration and technical consulting</li>
         </ul>
-        <div class="chips" aria-label="Skill Keywords">
-          <span class="chip">Indie Builder</span>
-          <span class="chip">AI Product</span>
-          <span class="chip">SEO + Content</span>
-          <span class="chip">Growth Loop</span>
-        </div>
-      </section>
-
-      <section class="section">
-        <h2>💡 我的产品</h2>
-        <ul>
-          <li><a href="https://ai-nanobanana.com" target="_blank" rel="noopener">AI NanoBanana</a> - AI 工具站</li>
-          <li><a href="https://allaitools.ai" target="_blank" rel="noopener">AllAITools.ai</a> - AI 工具导航</li>
-          <li><a href="https://gpt-image-15.com" target="_blank" rel="noopener">GPT Image 1:5</a> - 图像比例处理工具</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2>🧑‍💻 内容与资源</h2>
-        <ul>
-          <li><a href="/blog/" rel="noopener">Blog</a> - 长文复盘与方法论</li>
-          <li><a href="/blog/newsletter/" rel="noopener">Newsletter</a> - 周度实战更新</li>
-          <li><a href="/resources.html" rel="noopener">Resources</a> - 工具与资料整理</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <h2>📫 联系我</h2>
-        <ul>
-          <li>邮箱：<a href="mailto:hi@yuni.dev">hi@yuni.dev</a></li>
-          <li>GitHub：<a href="https://github.com/linksee-dev" target="_blank" rel="noopener">linksee-dev</a></li>
-          <li>Bluesky：<a href="https://bsky.app/profile/linksee-dev.bsky.social" target="_blank" rel="noopener">@linksee-dev</a></li>
-          <li>LinkStack：<a href="https://linkstack.lgbt/@yuni" target="_blank" rel="noopener">@yuni</a></li>
-        </ul>
-      </section>
-
-      <div class="cta">
-        <a class="btn btn-primary" href="/blog/newsletter/">查看 Newsletter</a>
-        <a class="btn btn-secondary" href="/">返回首页</a>
       </div>
 
-      <p class="footer-note">© 2026 Yuni. 欢迎合作、交流与一起做点有意思的产品。</p>
-    </article>
+      <div class="section">
+        <h2>🧠 Skills</h2>
+        <ul>
+          <li>Product design to MVP shipping</li>
+          <li>Full-stack web app architecture</li>
+          <li>AI feature integration (LLM + workflow automation)</li>
+          <li>Payment integration and subscription flows</li>
+          <li>SEO-focused content/product landing pages</li>
+          <li>Growth experiments and conversion optimization</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>🧰 Tech Stack</h2>
+
+        <div class="subhead">Front-End</div>
+        <div class="badge-grid">
+          <img src="https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React">
+          <img src="https://img.shields.io/badge/-Vue.js-4FC08D?style=flat-square&logo=vue.js&logoColor=white" alt="Vue.js">
+          <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript">
+          <img src="https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+        </div>
+
+        <div class="subhead">Back-End</div>
+        <div class="badge-grid">
+          <img src="https://img.shields.io/badge/-Node.js-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js">
+          <img src="https://img.shields.io/badge/-Express-000000?style=flat-square&logo=express&logoColor=white" alt="Express">
+          <img src="https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white" alt="Python">
+        </div>
+
+        <div class="subhead">AI APIs</div>
+        <div class="badge-grid">
+          <img src="https://img.shields.io/badge/-OpenAI-412991?style=flat-square&logo=openai&logoColor=white" alt="OpenAI">
+          <img src="https://img.shields.io/badge/-Gemini-8E75B2?style=flat-square&logo=google&logoColor=white" alt="Gemini">
+        </div>
+
+        <div class="subhead">Payments</div>
+        <div class="badge-grid">
+          <img src="https://img.shields.io/badge/-Stripe-008CDD?style=flat-square&logo=stripe&logoColor=white" alt="Stripe">
+          <img src="https://img.shields.io/badge/-PayPal-00457C?style=flat-square&logo=paypal&logoColor=white" alt="PayPal">
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>💡 Products</h2>
+        <ul>
+          <li><a href="https://imgenhancer.net" target="_blank" rel="noopener">imgenhancer.net</a></li>
+          <li><a href="https://super-launch.app" target="_blank" rel="noopener">super-launch.app</a></li>
+          <li><a href="https://pixshot.ai" target="_blank" rel="noopener">pixshot.ai</a></li>
+          <li><a href="https://allaitools.ai" target="_blank" rel="noopener">allaitools.ai</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>📫 Contact Me</h2>
+        <ul>
+          <li><strong>Email:</strong> <a href="mailto:yuni.aigc@gmail.com">yuni.aigc@gmail.com</a></li>
+          <li><strong>Twitter(中文):</strong> <a href="https://x.com/yuniaigc" target="_blank" rel="noopener">@yuniaigc</a></li>
+          <li><strong>Twitter(En):</strong> <a href="https://x.com/linksee_dev" target="_blank" rel="noopener">@linksee_dev</a></li>
+          <li><strong>Github:</strong> <a href="https://github.com/linksee-dev" target="_blank" rel="noopener">github.com/linksee-dev</a></li>
+          <li><strong>Blog:</strong> <a href="https://ai-yuni.com/blog" target="_blank" rel="noopener">ai-yuni.com/blog</a></li>
+          <li><strong>Website:</strong> <a href="https://ai-yuni.com" target="_blank" rel="noopener">ai-yuni.com</a></li>
+        </ul>
+
+        <p class="subhead" style="margin-top: 14px;">中文开发者还可以通过以下渠道关注我:</p>
+        <ul>
+          <li><strong>掘金:</strong> <a href="https://juejin.cn/user/3264888577730907" target="_blank" rel="noopener">芋泥麻薯布丁烧</a></li>
+          <li><strong>知乎:</strong> <a href="https://www.zhihu.com/people/zpothec" target="_blank" rel="noopener">芋泥麻薯布丁烧</a></li>
+          <li><strong>即刻:</strong> <a href="https://web.okjike.com/u/E345ABD3-0EB6-422E-8F0E-9A53D32AF93B" target="_blank" rel="noopener">芋泥麻薯布丁烧</a></li>
+          <li><strong>微信公众号:</strong> <code>芋见AI出海</code></li>
+          <li><strong>微信交流群:</strong> <a href="https://ai-yuni.com/make-a-frend/" target="_blank" rel="noopener">独立开发出海交流群</a></li>
+          <li><strong>中文博客:</strong> <a href="https://ai-yuni.com/blog/" target="_blank" rel="noopener">芋泥的开发笔记</a></li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>📊 GitHub Snapshot</h2>
+        <div class="stats">
+          <img src="https://github-readme-stats.vercel.app/api?username=linksee-dev&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true" alt="GitHub Stats">
+          <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=linksee-dev&layout=compact&langs_count=8&theme=tokyonight" alt="Top Languages">
+        </div>
+        <div class="wide">
+          <img src="https://github-readme-streak-stats.herokuapp.com/?user=linksee-dev&theme=tokyonight" alt="GitHub Streak">
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>📈 Contribution Activity</h2>
+        <div class="wide">
+          <a href="https://github.com/linksee-dev" target="_blank" rel="noopener">
+            <img src="https://github-readme-activity-graph.vercel.app/graph?username=linksee-dev&theme=tokyo-night" alt="Activity Graph">
+          </a>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <div class="section" style="text-align: center;">
+        <img src="https://komarev.com/ghpvc/?username=linksee-dev&color=0ea5e9&style=flat-square&label=Profile+Views" alt="Profile views">
+        <p class="closing"><strong>Building useful software, one product at a time.</strong></p>
+      </div>
+    </section>
   </main>
 </body>
 </html>
