@@ -43,8 +43,7 @@ jobs:
         run: |
           bundle exec jekyll build \
             --destination "../_site${{ steps.pages.outputs.base_path }}/blog" \
-            --baseurl "${{ steps.pages.outputs.base_path }}/blog" \
-            --url "https://linksee-dev.github.io"
+            --baseurl "${{ steps.pages.outputs.base_path }}/blog"
         env:
           JEKYLL_ENV: production
 

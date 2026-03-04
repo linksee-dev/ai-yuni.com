@@ -25,9 +25,6 @@ social:
 
 theme: jekyll-theme-chirpy
 
-plugins:
-  - jekyll-include-cache
-
 # Chirpy / SEO
 toc: true
 comments:
