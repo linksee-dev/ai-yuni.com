@@ -7,9 +7,9 @@ description: >-
   一个聚合 blog 与 newsletter 的内容中心。所有内容统一写在 _posts，
   GitHub Pages 与本地站点保持同源同步。
 
-# 修改为你的实际域名/仓库地址
-url: "https://linksee-dev.github.io"
-baseurl: "/ai-yuni.com"
+# 生产域名（Cloudflare 代理到 GitHub Pages）
+url: "https://ai-yuni.com"
+baseurl: ""
 
 github:
   username: linksee-dev

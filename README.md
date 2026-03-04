@@ -51,12 +51,19 @@ bundle exec jekyll serve
 1. 推送到 `main`（或 `master`）分支。
 2. GitHub Actions 自动执行 `.github/workflows/pages.yml`。
 3. 在仓库 `Settings -> Pages` 中选择 `GitHub Actions` 作为部署方式。
+4. 若使用自定义域名，仓库根目录保留 `CNAME` 文件（当前为 `ai-yuni.com`）。
 
 ## 重要配置
 
-请按你的实际地址修改 `_config.yml`：
+当前已按自定义域名配置：
 
-- `url`
-- `baseurl`
+- `url: https://ai-yuni.com`
+- `baseurl: ""`
 
-如果你使用自定义域名（例如 `ai-yuni.com`），通常需要把 `baseurl` 改为空字符串，并在仓库中添加 `CNAME`。
+## Cloudflare DNS（必须）
+
+若你用 Cloudflare 托管域名，请确保：
+
+1. `@` 记录指向 `linksee-dev.github.io`（CNAME，使用 CNAME Flattening）。
+2. `www` 记录指向 `linksee-dev.github.io`（可选）。
+3. 首次签发证书建议 `DNS only`（灰云），生效后再切 `Proxied`（橙云）。
