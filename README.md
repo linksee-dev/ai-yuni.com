@@ -53,6 +53,14 @@ bundle exec jekyll serve
 3. 在仓库 `Settings -> Pages` 中选择 `GitHub Actions` 作为部署方式。
 4. 若使用自定义域名，仓库根目录保留 `CNAME` 文件（当前为 `ai-yuni.com`）。
 
+## Cloudflare Pages 发布（当前生产）
+
+生产域名 `ai-yuni.com` 当前由 Cloudflare Pages 托管。
+
+1. 推送到 `main`（或 `master`）分支。
+2. GitHub Actions 自动执行 `.github/workflows/cloudflare-pages.yml`。
+3. 工作流会构建 Jekyll 后发布到 Cloudflare Pages 项目 `ai-yuni`。
+
 ## 重要配置
 
 当前已按自定义域名配置：
@@ -64,6 +72,5 @@ bundle exec jekyll serve
 
 若你用 Cloudflare 托管域名，请确保：
 
-1. `@` 记录指向 `linksee-dev.github.io`（CNAME，使用 CNAME Flattening）。
-2. `www` 记录指向 `linksee-dev.github.io`（可选）。
-3. 首次签发证书建议 `DNS only`（灰云），生效后再切 `Proxied`（橙云）。
+1. `ai-yuni.com` / `www.ai-yuni.com` 已绑定到 Cloudflare Pages 项目 `ai-yuni`。
+2. 若改为 GitHub Pages 直出，再把 `@` 与 `www` 指到 `linksee-dev.github.io`。
