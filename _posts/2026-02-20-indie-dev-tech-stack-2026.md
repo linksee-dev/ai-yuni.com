@@ -1,5 +1,5 @@
 ---
-title: Indie Dev Tech Stack in 2026: What I Actually Use
+title: "Indie Dev Tech Stack in 2026: What I Actually Use"
 date: 2026-02-20 09:30:00 +0800
 categories: [blog]
 tags: [full-stack, tools, workflow]
