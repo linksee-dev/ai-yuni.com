@@ -33,7 +33,8 @@ toc: true
 comments:
   active: false
 
-# 让首页展示全部文章（不启用分页）
+# 让首页展示文章列表
+paginate: 10
 permalink: /:year/:month/:day/:title/
 
 collections:
