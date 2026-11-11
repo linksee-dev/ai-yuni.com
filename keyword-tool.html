@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Yuni Keyword Research is an internal tool that looks up Google search volume for keywords through the Google Ads API Keyword Planner.">
+<title>Yuni Keyword Research</title>
+<style>
+body{margin:0;background:#fff;color:#111827;font:16px/1.7 -apple-system,BlinkMacSystemFont,"Segoe UI",Inter,sans-serif}
+main{max-width:720px;margin:0 auto;padding:48px 16px}
+h1{font-size:34px;margin:0 0 12px}h2{font-size:20px;margin:32px 0 8px}
+p,li{color:#374151}a{color:#1d4ed8}footer{margin-top:48px;padding-top:16px;border-top:1px solid #e5e7eb;font-size:14px;color:#4b5563}
+</style>
+</head>
+<body>
+<main>
+<h1>Yuni Keyword Research</h1>
+<p>Yuni Keyword Research is a keyword research tool built and used by Yuni, an independent developer. It looks up how many people search Google for a keyword each month, so Yuni can decide which topics and pages to build for Yuni's own websites.</p>
+
+<h2>What the app does</h2>
+<ul>
+<li>Takes a list of keywords (for example "text to song" or "lyric to song").</li>
+<li>Calls the Google Ads API Keyword Planner (<code>GenerateKeywordHistoricalMetrics</code>) to get the average monthly search volume, the search volume for each of the last 12 months, competition level and top-of-page bid ranges.</li>
+<li>Saves the numbers into Yuni's local keyword research notes (an Obsidian vault on Yuni's own computer).</li>
+</ul>
+
+<h2>Google data it uses</h2>
+<p>The app signs in with Google OAuth and requests one scope: <code>https://www.googleapis.com/auth/adwords</code>. It only reads keyword planning metrics. It never creates, edits or deletes campaigns, ads, budgets, billing settings or any other data in a Google Ads account, and it does not access Gmail, Drive, contacts or any other Google service.</p>
+
+<h2>Who can use it</h2>
+<p>The app is not a public service and has no sign-up. It runs as a command-line script on Yuni's computer and is used only with Yuni's own Google Ads manager account. There is no login page; this page is the app's home page.</p>
+
+<h2>What it does not do</h2>
+<p>The app does not generate, edit or store images or video, does not process personal data about other people, and does not sell or share any data.</p>
+
+<footer>
+<a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms of Service</a> · Contact: <a href="mailto:yuni.aigc@gmail.com">yuni.aigc@gmail.com</a> · <a href="/">ai-yuni.com</a>
+</footer>
+</main>
+</body>
+</html>
